@@ -21,6 +21,7 @@ var_dump($e); // affiche Alex comme console par example
     'name' => 'Antonio',
     'surname' => 'BAND',
     'age' => 20,
+    'education' => array('school in 2003', 'college in 2013')
  );
 
- echo $g['name']; // affiche Antonio
+ echo $g['education'][1]; // affiche Antonio
