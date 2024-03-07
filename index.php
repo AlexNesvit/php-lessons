@@ -32,4 +32,8 @@ var_dump($e); // affiche Alex comme console par example
  $surname = 'METLA';
 
  echo $name . ' ' . $surname;
+
+ // + - * / %
+
+ echo 5 + 10;
  
