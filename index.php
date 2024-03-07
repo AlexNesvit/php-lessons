@@ -18,7 +18,9 @@ echo $e[2]; //affiche Alex, 3 element
 var_dump($e); // affiche Alex comme console par example 
 
  $g = array(
-
+    'name' => 'Antonio',
+    'surname' => 'BAND',
+    'age' => 20,
  );
 
- echo $g[3];
+ echo $g['name']; // affiche Antonio
