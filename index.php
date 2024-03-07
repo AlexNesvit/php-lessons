@@ -24,4 +24,6 @@ var_dump($e); // affiche Alex comme console par example
     'education' => array('school in 2003', 'college in 2013')
  );
 
- echo $g['education'][1]; // affiche Antonio
+ $j = true; // boolean-bool
+ 
+ echo $g['education'][1]; // affiche college in 2013
