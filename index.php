@@ -7,4 +7,4 @@ $d = "Alex"; // string-str
 $e = array(1,2,3); // massiv-array
 
 // echo $a; //echo $b; //echo $c; //echo $d; // - vivesti znachenie
-echo $e[2];
+echo $e[2]; //vivodit (3), eto 3 element 0, 1, (2)
