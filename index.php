@@ -27,3 +27,9 @@ var_dump($e); // affiche Alex comme console par example
  $j = true; // boolean-bool
  
  echo $g['education'][1]; // affiche college in 2013
+
+ $name = 'Alex';
+ $surname = 'METLA';
+
+ echo $name . ' ' . $surname;
+ 
