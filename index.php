@@ -14,7 +14,8 @@ $e = array(    // massiv-array
     "Alex");  // index-2
 
 // echo $a; //echo $b; //echo $c; //echo $d; // pour afficher
-echo $e[2]; //affiche Alex, 3 element 
+echo $e[2]; //affiche Alex, 3 element
+var_dump($e); // affiche Alex comme console par example 
 
  $g = array(
 
