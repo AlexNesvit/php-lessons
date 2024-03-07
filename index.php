@@ -9,7 +9,10 @@ $b = 14.12; // float
 $c = 'Alex'; // string-str
 $d = "Alex"; // string-str
 $f = false; // boolean
-$e = array(1,2,3); // massiv-array
+$e = array(    // massiv-array
+    "John",   // index-0
+    "Flame",  // index-1
+    "Alex");  // index-2
 
 // echo $a; //echo $b; //echo $c; //echo $d; // pour afficher
-echo $e[2]; //affiche (3), 3 element 0, 1, (2)
+echo $e[2]; //affiche Alex, 3 element 
