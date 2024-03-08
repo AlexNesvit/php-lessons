@@ -1,6 +1,6 @@
 <?php
 
-// php -S localhost:8000  pour lance le serveur
+// php -S localhost:8000  pour lance le serveur ou dans WAMP, MAMP localhost, nom de projet
 // ctr+c  pour arreter le serveur
 
 $a = 100; // number- integer, int
@@ -15,7 +15,7 @@ $e = array(    // massiv-array
 
 // echo $a; //echo $b; //echo $c; //echo $d; // pour afficher
 echo $e[2]; //affiche Alex, 3 element
-var_dump($e); // affiche Alex comme console par example 
+var_dump($e); // affiche Alex comme dans console par example 
 
  $g = array(
     'name' => 'Antonio',
@@ -37,7 +37,7 @@ var_dump($e); // affiche Alex comme console par example
 
  echo 5 + 10;
 
- echo 1080 % 2; // chetnoe, esli 0 (delenie po modulu)
+ echo 1080 % 2; // les chiffres pairs
 
  $a = 100;
  $b = 15;
@@ -46,7 +46,7 @@ var_dump($e); // affiche Alex comme console par example
 
  // 
 
- $weather = 'bon'; // niege, pluie, bon, nuageus
+ $weather = 'beau'; // neige, pluie, beau, nuageux
 
  if( $weather == 'pluie' ){
     echo '--Il pluie, rester chez vous--';
@@ -56,18 +56,22 @@ var_dump($e); // affiche Alex comme console par example
     echo '--Il niege, rester chez vous--';
  }
 
- if( $weather == 'bon' ){
-    echo '--Il fait bon, sortez vous--';
+ if( $weather == 'beau' ){
+    echo '--Il fait beau, sortez vous--';
  }
 
- if( $weather =='nuages'){
-    echo '--Les nuages--';
+ if( $weather =='nuageux'){
+    echo '--Les nuageux--';
  }
+// Carte d'accès au club
 
- // Carte de passage pour le club
  $age = 20;
  
  if( $age < 24 ){
-    echo '--Vous etes trop petit pour le Club--';
+    echo '--Vous êtes trop jeune pour entrer dans le club--';
+ }
+ 
+ if( $age >= 24 ){
+    echo '--Bienvenue dans le Club--';
  }
  
