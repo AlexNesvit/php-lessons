@@ -44,7 +44,7 @@ var_dump($e); // affiche Alex comme console par example
 
  echo '--Réponse:' . $a + $b; 
 
- $weather = 'pluie'; // niege, pluie, bon, nuageus
+ $weather = 'bon'; // niege, pluie, bon, nuageus
 
  if( $weather == 'pluie' ){
     echo '--Il pluie, rester chez vous--';
