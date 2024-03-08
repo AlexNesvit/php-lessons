@@ -99,7 +99,7 @@ if( $age < 20 and $name != 'Jonny'){
    echo '--Bienvenue Jonny--';
 }
 
-// rating and (example)
+// rating "and" (example)
 
 $rating = 33;
 
