@@ -65,6 +65,9 @@ var_dump($e); // affiche Alex comme console par example
  }
 
  // Carte de passage pour le club
+ $age = 20;
  
- 
+ if( $age < 24 ){
+    echo '--Vous etes trop petit pour le Club--';
+ }
  
