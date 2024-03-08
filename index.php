@@ -44,6 +44,8 @@ var_dump($e); // affiche Alex comme console par example
 
  echo '--Réponse:' . $a + $b; 
 
+ // 
+
  $weather = 'bon'; // niege, pluie, bon, nuageus
 
  if( $weather == 'pluie' ){
@@ -61,4 +63,8 @@ var_dump($e); // affiche Alex comme console par example
  if( $weather =='nuages'){
     echo '--Les nuages--';
  }
+
+ // Carte de passage pour le club
+ 
+ 
  
