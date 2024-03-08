@@ -93,5 +93,5 @@ var_dump($e); // affiche Alex comme dans console par example
 $name = 'Jonny';
 $age = 20;
 
-if( $age < 20 
+if( $age < 20) 
 
