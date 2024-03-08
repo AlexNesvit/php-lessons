@@ -103,5 +103,9 @@ if( $age < 20 and $name != 'Jonny'){
 
 $rating = 33;
 
-if 
+if ( $rating >= 25 and $rating <= 75){
+   echo 'You good';
+} else {
+   echo 'You bad';
+}
 
