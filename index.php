@@ -88,3 +88,5 @@ var_dump($e); // affiche Alex comme dans console par example
     echo '--Juste Jonny qui a accéss--';
  }
  
+// Les operateurs logiques (or, and)
+
