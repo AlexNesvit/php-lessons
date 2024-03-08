@@ -44,7 +44,7 @@ var_dump($e); // affiche Alex comme dans console par example
 
  echo '--Réponse:' . $a + $b; 
 
- // 
+ // if
 
  $weather = 'beau'; // neige, pluie, beau, nuageux
 
@@ -63,15 +63,16 @@ var_dump($e); // affiche Alex comme dans console par example
  if( $weather =='nuageux'){
     echo '--Les nuageux--';
  }
-// Carte d'accès au club
 
+
+// Carte d'accès au club
  $age = 20;
  
  if( $age < 24 ){
-    echo '--Vous êtes trop jeune pour entrer dans le club--';
+    echo '--Vous êtes trop jeune pour entrer dans le club!--';
  }
  
  if( $age >= 24 ){
-    echo '--Bienvenue dans le Club--';
+    echo '--Bienvenue dans le Club!--';
  }
  
