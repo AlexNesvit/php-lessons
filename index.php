@@ -49,4 +49,16 @@ var_dump($e); // affiche Alex comme console par example
  if( $weather == 'pluie' ){
     echo '--Il pluie, rester chez vous--';
  }
+
+ if( $weather == 'niege' ){
+    echo '--Il niege, rester chez vous--';
+ }
+
+ if( $weather == 'bon' ){
+    echo '--Il fait bon, sortez vous--';
+ }
+
+ if( $weather =='nuages'){
+    echo '--Les nuages--';
+ }
  
