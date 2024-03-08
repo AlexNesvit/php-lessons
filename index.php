@@ -90,3 +90,8 @@ var_dump($e); // affiche Alex comme dans console par example
  
 // Les operateurs logiques (or, and)
 
+$name = 'Jonny';
+$age = 20;
+
+if( $age < 20 
+
