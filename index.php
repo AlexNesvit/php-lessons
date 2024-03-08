@@ -88,7 +88,7 @@ var_dump($e); // affiche Alex comme dans console par example
     echo '--Juste Jonny qui a accéss--';
  }
  
-// Les operateurs logiques (or, and)
+// Les operators logiques (or, and)
 
 $name = 'Jonny';
 $age = 20;
@@ -99,7 +99,7 @@ if( $age < 20 and $name != 'Jonny'){
    echo '--Bienvenue Jonny--';
 }
 
-// operatuer "and" (example)
+// L'operator "and" (example)
 
 $rating = 33;
 
