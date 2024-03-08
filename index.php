@@ -39,5 +39,14 @@ var_dump($e); // affiche Alex comme console par example
 
  echo 1080 % 2; // chetnoe, esli 0 (delenie po modulu)
 
- 
+ $a = 100;
+ $b = 15;
+
+ echo '--Réponse:' . $a + $b; 
+
+ $weather = 'pluie'; // niege, pluie, bon, nuageus
+
+ if( $weather == 'pluie' ){
+    echo '--Il pluie, rester chez vous--';
+ }
  
