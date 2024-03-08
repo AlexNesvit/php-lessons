@@ -65,7 +65,7 @@ var_dump($e); // affiche Alex comme dans console par example
  }
 
 
-// Carte d'accès au club
+// Carte d'accès au club (if)
  $age = 20;
  
  if( $age < 24 ){
@@ -74,5 +74,17 @@ var_dump($e); // affiche Alex comme dans console par example
  
  if( $age >= 24 ){
     echo '--Bienvenue dans le Club!--';
+ }
+
+ // <, >, <=, >=, ==, != 
+
+ // if, else
+
+ $name = 'Jonny';
+
+ if( $name == 'Jonny' ){
+    echo '--Bienvenue Jonny--';
+ } else {
+    echo '--Juste Jonny qui a accéss--';
  }
  
