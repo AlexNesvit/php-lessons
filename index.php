@@ -37,5 +37,7 @@ var_dump($e); // affiche Alex comme console par example
 
  echo 5 + 10;
 
- echo 1080 % 2;
+ echo 1080 % 2; // chetnoe, esli 0 (delenie po modulu)
+
+ 
  
