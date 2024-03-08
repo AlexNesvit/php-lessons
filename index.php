@@ -93,5 +93,9 @@ var_dump($e); // affiche Alex comme dans console par example
 $name = 'Jonny';
 $age = 20;
 
-if( $age < 20) 
+if( $age < 20 and $name != 'Jonny'){
+   echo '--Juste Jonny qui a accéss--';
+} else {
+   echo '--Bienvenue Jonny--';
+}
 
