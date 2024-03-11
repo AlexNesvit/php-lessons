@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 <?php
 
 // php -S localhost:8000  pour lance le serveur ou dans WAMP, MAMP localhost, nom de projet
 // ctr+c  pour arreter le serveur
+=======
+><?php
+>>>>>>> 5f7a107f26bbe17f56c2864c920407fea9ec425f
 
 $a = 100; // number- integer, int
 $b = 14.12; // float
