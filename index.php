@@ -1,4 +1,4 @@
-><?php
+<?php
 
 $a = 100; // number- integer, int
 $b = 14.12; // float
