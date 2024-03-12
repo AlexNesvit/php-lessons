@@ -125,3 +125,12 @@ for($i = 1; $i <= 10; $i++){
    echo '<br>';
 }
 
+// while
+
+$test = 10;
+while( $test <= 100)
+{
+   // code
+   echo 'Test '.$test. '<br/>';
+   $test++;
+}
