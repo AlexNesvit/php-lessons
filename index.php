@@ -128,7 +128,7 @@ for($i = 1; $i <= 10; $i++){
 // while
 
 $test = 10;
-while( $test <= 100)
+while( $test <= 20)
 {
    // code
    echo 'Test '.$test. '<br>';
@@ -146,3 +146,27 @@ $names = array(
 foreach( $names as $value ){
    echo $value . '<br>';
 };
+
+
+// function 
+
+function myfunction(){
+   echo 'Hello word!' . '<br>';
+};
+
+myfunction();
+myfunction();
+myfunction();
+
+// function "bigger number"  
+function get_bigger($a, $b){
+
+   if( $a > $b )
+   {
+      echo $a;
+   } else {
+      echo $b;
+   }
+}
+
+get_bigger(10, 20);
