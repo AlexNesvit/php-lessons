@@ -113,6 +113,15 @@ if ( $rating >= 25 and $rating <= 75){ //if rating=true and rating=true
 // Cicles for, while, foreach
 
 for($i = 1; $i <= 10; $i++){
-   echo $i . '<br>';
+   echo $i;
+
+   if( $i % 2 == 0 )
+   {
+      echo ' -paire number';
+   }else {
+      echo ' - no paire number';
+   }
+
+   echo '<br>';
 }
 
