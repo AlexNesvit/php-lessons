@@ -110,3 +110,9 @@ if ( $rating >= 25 and $rating <= 75){ //if rating=true and rating=true
    echo 'You bad';
 }
 
+// Cicles for, while, foreach
+
+for($i = 0; $i <= 10; $i++){
+   echo 'Hello word!<br>';
+}
+
