@@ -131,6 +131,18 @@ $test = 10;
 while( $test <= 100)
 {
    // code
-   echo 'Test '.$test. '<br/>';
+   echo 'Test '.$test. '<br>';
    $test++;
 }
+
+$names = array(
+   'Jonny',
+   'Abraham',
+   'Whisker',
+   'Walker',
+   'Alex'
+);
+
+foreach( $names as $value ){
+   echo $value . '<br>';
+};
