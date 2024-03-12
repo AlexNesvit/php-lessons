@@ -167,6 +167,8 @@ function get_bigger($a, $b){
    } else {
       echo $b;
    }
+
+echo '<br>';
 }
 
 get_bigger(10, 20);
