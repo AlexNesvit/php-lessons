@@ -112,7 +112,7 @@ if ( $rating >= 25 and $rating <= 75){ //if rating=true and rating=true
 
 // Cicles for, while, foreach
 
-for($i = 0; $i <= 10; $i++){
-   echo 'Hello word!<br>';
+for($i = 1; $i <= 10; $i++){
+   echo $i . '<br>';
 }
 
