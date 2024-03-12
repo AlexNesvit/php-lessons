@@ -170,3 +170,6 @@ function get_bigger($a, $b){
 }
 
 get_bigger(10, 20);
+get_bigger(20, 50);
+get_bigger(5, 200);
+
