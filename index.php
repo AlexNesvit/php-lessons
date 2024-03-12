@@ -106,8 +106,8 @@ if( $age < 20 and $name != 'Jonny'){
 // L'operator "and" (example)
 
 $rating = 33;
-
-if ( $rating >= 25 and $rating <= 75){
+ 
+if ( $rating >= 25 and $rating <= 75){ //if rating=true and rating=true
    echo 'You good';
 } else {
    echo 'You bad';
