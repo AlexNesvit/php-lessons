@@ -191,4 +191,6 @@ $bigger = funReturn(10, 20);
 
 echo $bigger;
 
+// abs, round, ceil, floor, rand, min, max
+
 
