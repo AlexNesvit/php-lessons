@@ -173,5 +173,22 @@ echo '<br>';
 
 get_bigger(10, 20);
 get_bigger(20, 50);
-get_bigger(5, 200);
+get_bigger(5, -200);
+
+// function return 
+
+function funReturn($a, $b){
+
+   if( $a > $b )
+   {
+      return $a;
+   } else {
+      return $b;
+   }
+}
+
+$bigger = funReturn(10, 20);
+
+echo $bigger;
+
 
