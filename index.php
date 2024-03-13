@@ -27,12 +27,12 @@ var_dump($e); // affiche Alex comme dans console par example
 
  $j = true; // boolean-bool
  
- echo $g['education'][1]; // affiche college in 2013
+ echo $g['education'][1]. '<br>'; // affiche college in 2013
 
  $name = 'Alex';
  $surname = 'METLA';
 
- echo $name . ' ' . $surname;
+ echo $name . ' ' . $surname. '<br>';
 
  // + - * / %
 
@@ -43,26 +43,26 @@ var_dump($e); // affiche Alex comme dans console par example
  $a = 100;
  $b = 15;
 
- echo '--Réponse:' . $a + $b; 
+ echo '--Réponse:' . $a + $b. '<br>'; 
 
  // if
 
  $weather = 'beau'; // neige, pluie, beau, nuageux
 
  if( $weather == 'pluie' ){
-    echo '--Il pluie, rester chez vous--';
+    echo '--Il pluie, rester chez vous--'. '<br>';
  }
 
  if( $weather == 'niege' ){
-    echo '--Il niege, rester chez vous--';
+    echo '--Il niege, rester chez vous--'. '<br>';
  }
 
  if( $weather == 'beau' ){
-    echo '--Il fait beau, sortez vous--';
+    echo '--Il fait beau, sortez vous--'. '<br>';
  }
 
  if( $weather =='nuageux'){
-    echo '--Les nuageux--';
+    echo '--Les nuageux--'. '<br>';
  }
 
 
@@ -70,11 +70,11 @@ var_dump($e); // affiche Alex comme dans console par example
  $age = 20;
  
  if( $age < 24 ){
-    echo '--Vous êtes trop jeune pour entrer dans le club!--';
+    echo '--Vous êtes trop jeune pour entrer dans le club!--'. '<br>';
  }
  
  if( $age >= 24 ){
-    echo '--Bienvenue dans le Club!--';
+    echo '--Bienvenue dans le Club!--'. '<br>';
  }
 
  // <, >, <=, >=, ==, != 
@@ -84,9 +84,9 @@ var_dump($e); // affiche Alex comme dans console par example
  $name = 'Jonny';
 
  if( $name == 'Jonny' ){
-    echo '--Bienvenue Jonny--';
+    echo '--Bienvenue Jonny--'. '<br>';
  } else {
-    echo '--Juste Jonny qui a accéss--';
+    echo '--Juste Jonny qui a accéss--'. '<br>';
  }
  
 // Les operators logiques (or, and)
@@ -97,7 +97,7 @@ $age = 20;
 if( $age < 20 and $name != 'Jonny'){
    echo '--Juste Jonny qui a accéss--';
 } else {
-   echo '--Bienvenue Jonny--';
+   echo '--Bienvenue Jonny--'. '<br>';
 }
 
 // L'operator "and" (example)
@@ -105,9 +105,9 @@ if( $age < 20 and $name != 'Jonny'){
 $rating = 33;
  
 if ( $rating >= 25 and $rating <= 75){ //if rating=true and rating=true
-   echo 'You good';
+   echo 'You good'. '<br>';
 } else {
-   echo 'You bad';
+   echo 'You bad'. '<br>';
 }
 
 // Cicles for, while, foreach
