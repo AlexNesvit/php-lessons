@@ -195,4 +195,4 @@ echo $bigger. '<br>';
 
 echo abs(-300). '<br>';;  // absolute number
 
-echo round(50.35). '<br>'; // round number
+echo round(50.50). '<br>'; // round number
