@@ -189,10 +189,10 @@ function funReturn($a, $b){
 
 $bigger = funReturn(10, 20);
 
-echo $bigger;
+echo $bigger. '<br>';
 
 // abs, round, ceil, floor, rand, min, max
 
-echo abs(-300);  // absolute number
+echo abs(-300). '<br>';;  // absolute number
 
-echo round(50.35); // round number
+echo round(50.35). '<br>'; // round number
