@@ -193,4 +193,6 @@ echo $bigger;
 
 // abs, round, ceil, floor, rand, min, max
 
+echo abs(-300);  // absolute number
 
+echo round(50.35); // round number
