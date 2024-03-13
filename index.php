@@ -1,7 +1,7 @@
 
 <?php
 
-// php -S localhost:8000  pour lance le serveur ou dans WAMP, MAMP localhost, nom de projet
+// php -S localhost:8000  pour lance le serveur ou dans WAMP (MAMP) localhost, nom de projet
 // ctr+c  pour arreter le serveur
 
 $a = 100; // number- integer, int
