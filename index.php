@@ -198,3 +198,7 @@ echo abs(-300). '<br>';;  // absolute number
 echo round(50.50). '<br>'; // round number
 
 echo rand(0, 100). '<br>'; // random number 0-100
+
+echo min(3, 4, 6, 8, 78, 879). '<br>'; // minimum
+
+echo max(3, 4, 6, 8, 78, 879). '<br>'; // maximum
