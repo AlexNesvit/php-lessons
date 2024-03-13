@@ -196,3 +196,5 @@ echo $bigger. '<br>';
 echo abs(-300). '<br>';;  // absolute number
 
 echo round(50.50). '<br>'; // round number
+
+echo rand(0, 100). '<br>'; // random number 0-100
