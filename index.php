@@ -203,7 +203,19 @@ echo min(3, 4, 6, 8, 78, 879). '<br>'; // minimum
 
 echo max(3, 4, 6, 8, 78, 879). '<br>'; // maximum
 
-echo 4; '<br>';
+echo 4 . '<br>';
 echo "\n"; // razdelitel
-echo (4);
+
+
+$foo = 5;
+$bar = 7;
+
+echo $foo + $bar;
+echo "\n";
+echo $foo - $bar;
+echo "\n";
+echo $foo * $bar;
+echo "\n";
+echo $foo / $bar;
+echo "\n";
 
