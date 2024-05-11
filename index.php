@@ -219,3 +219,9 @@ echo "\n";
 echo $foo / $bar;
 echo "\n";
 
+$d = 'string';
+echo $d;
+echo "\n";
+$f = "$d 888";
+echo $f;
+
