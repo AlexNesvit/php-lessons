@@ -225,8 +225,8 @@ echo "\n";
 $f = "$d 888";
 echo $f;
 
-var_dump($f); // vivodit znachenie + kol-vo simvolov
+var_dump($f); // functia vivodit znachenie + kol-vo simvolov
 echo "\n";
 // phpinfo();
-//exec ('start calc');
+//exec ('start calc');  ???
 
