@@ -237,3 +237,12 @@ echo "\n";
 
 $a = false;
 var_dump($a);
+echo $a;
+echo "\n";
+
+$a = 'choose your power';
+var_dump($a);
+
+$l = strlen($a);
+
+echo $l;
