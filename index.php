@@ -246,3 +246,8 @@ var_dump($a);
 $l = strlen($a);
 
 echo $l;
+
+$a = 5;
+//gettype()  vivod tipe dannih
+echo gettype($a);
+echo "\n";
