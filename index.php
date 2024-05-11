@@ -227,4 +227,6 @@ echo $f;
 
 var_dump($f); // vivodit znachenie + kol-vo simvolov
 echo "\n";
+// phpinfo();
+//exec ('start calc');
 
