@@ -251,3 +251,7 @@ $a = 5;
 //gettype()  vivod tipe dannih
 echo gettype($a);
 echo "\n";
+
+// function round - okruglenie
+
+
