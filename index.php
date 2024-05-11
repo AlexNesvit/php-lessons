@@ -225,3 +225,6 @@ echo "\n";
 $f = "$d 888";
 echo $f;
 
+var_dump($f); // vivodit znachenie + kol-vo simvolov
+echo "\n";
+
