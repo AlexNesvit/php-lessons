@@ -252,6 +252,6 @@ $a = 5;
 echo gettype($a);
 echo "\n";
 
-// function round - okruglenie
+// function round - okruglenie do celogo
 
 
