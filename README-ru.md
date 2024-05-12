@@ -14,8 +14,9 @@
 - [🟣 Руководство по PHP 🟣](#-readmemd-template-)
 - [**Projet NOM**](#projet-nom)
     - [💻 Site Nom 💻](#-site-nom-)
-    - [À propos](#à-propos)
-    - [Ressources](#ressources)
+-[Основы синтаксиса](#Основы-синтаксиса)
+    - [Теги PHP](#Теги-PHP)
+    - 
 - [Accès au Site](#accès-au-site)
 - [Technologies Utilisées:](#technologies-utilisées)
     - [Technologies d'organisation du projet:](#technologies-dorganisation-du-projet)
@@ -36,13 +37,13 @@
   
 ---
 
-## À propos
+## Основы синтаксиса
 
 Le projet NOM-2024 est une application web pour.... Son objectif est de répondre aux besoins des professionnels du développement et de divers domaines, en leur permettant de présenter leurs travaux et de découvrir d'autres projets.
 
 ---
 
-## Ressources
+## Теги PHP
 
 - Enregistrement de nouveaux utilisateurs du site
 - Connexion des utilisateurs existants
