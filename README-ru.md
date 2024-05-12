@@ -4,7 +4,9 @@
   <img src="logo.svg" alt="Logo" width="100" height="100">
 
 
-# **Руководство по PHP**
+# **Руководство по PHP** https://www.php.net/manual/ru/index.php
+
+
 
 
 ## 💻 Руководство по PHP 💻
