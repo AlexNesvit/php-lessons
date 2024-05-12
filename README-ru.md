@@ -17,7 +17,16 @@
 -[Основы синтаксиса](#Основы-синтаксиса)
     - [Теги PHP](#Теги-PHP)
     - [Комментарии](#Комментарии)
-- [Accès au Site](#accès-au-site)
+- [Типы](#Типы)
+  - [null](#null)
+  - [bool](#bool)
+  - [int](#int)
+  - [float](#float)
+  - [string](#string)
+  - [array](#array)
+  - [object](#object)
+  - [callable](#callable)
+  - [resource](#resource)
 - [Technologies Utilisées:](#technologies-utilisées)
     - [Technologies d'organisation du projet:](#technologies-dorganisation-du-projet)
     - [Front-end:](#front-end)
@@ -85,9 +94,35 @@ PHP поддерживает комментарии в стиле 'C', 'C++' и 
  */
 ?>\
 
-# Accès au Site
+# Типы
 
-Le site est disponible sur ... . Vous pouvez y accéder via l'URL suivante :
+## null
+
+
+## bool
+
+
+## int
+
+
+## float
+
+
+## string
+
+
+## array
+
+
+## object
+
+
+## callable
+
+
+## resource
+
+
 
 [NOM-2024](http://localhost:8888)
 
