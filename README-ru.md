@@ -2,7 +2,7 @@
 # 🟣 Руководство по PHP 🟣
 
   <img src="logo.svg" alt="Logo" width="100" height="100">
-  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" width="45" height="40" alt="PHP" />&nbsp;
+  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" width="150" height="150" alt="PHP" />&nbsp;
 
 
 # **Руководство по PHP** https://www.php.net/manual/ru/index.php
