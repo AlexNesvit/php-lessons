@@ -1,9 +1,9 @@
 
 # 🟣 Руководство по PHP 🟣
 
-<div img align="left" src="logo.svg" alt="Logo" width="100" height="100">
-  <img align="right" src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" width="150" height="150" alt="PHP" />&nbsp;
-</div>
+  <img src="logo.svg" alt="Logo" width="100" height="100">
+  <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg" width="150" height="150" alt="PHP" />&nbsp;
+
 
 # **Руководство по PHP** https://www.php.net/manual/ru/index.php
 
