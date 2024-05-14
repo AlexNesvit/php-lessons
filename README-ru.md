@@ -8,8 +8,6 @@
 # **Руководство по PHP** https://www.php.net/manual/ru/index.php
 
 
-
-
 ## 💻 Руководство по PHP 💻
 
 - [🟣 Руководство по PHP 🟣](#-readmemd-template-)
@@ -28,11 +26,18 @@
   - [Перечисления](#Перечисления)
   - [callable](#callable)
   - [resource](#resource)
-- [Technologies Utilisées:](#technologies-utilisées)
-    - [Technologies d'organisation du projet:](#technologies-dorganisation-du-projet)
-    - [Front-end:](#front-end)
-    - [Back-end:](#back-end)
-    - [Base de données :](#base-de-données-)
+- [Переменные:](#Переменные)
+  - [Основы](#Основы)
+  - [Предопределённые переменные](#Предопределённые-переменные)
+  - [string](#string)
+  - [array](#array)
+  - [object](#object)
+  
+
+  - [Technologies d'organisation du projet:](#technologies-dorganisation-du-projet)
+  - [Front-end:](#front-end)
+  - [Back-end:](#back-end)
+  - [Base de données :](#base-de-données-)
 - [Installation des Frameworks et des bibliothèques:](#installation-des-frameworks-et-des-bibliothèques)
     - [Front-end:](#front-end-1)
     - [Back-end:](#back-end-1)
@@ -475,7 +480,11 @@ Resource — это переменная, содержащая ссылку на
 
 ---
 
-# Technologies Utilisées:
+# Переменные
+
+## Основы
+
+## Предопределённые переменные
 
 ## Technologies d'organisation du projet:
 - La modele[Figma](https://www.figma.com/)
