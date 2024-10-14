@@ -18,77 +18,77 @@ $e = array(    // massiv-array
 echo $e[2]; //affiche Alex, 3 element
 var_dump($e); // affiche Alex comme dans console par example 
 
- $g = array(
-    'name' => 'Antonio',
-    'surname' => 'BAND',
-    'age' => 20,
-    'education' => array('school in 2003', 'college in 2013')
- );
+$g = array(
+   'name' => 'Antonio',
+   'surname' => 'BAND',
+   'age' => 20,
+   'education' => array('school in 2003', 'college in 2013')
+);
 
  $j = true; // boolean-bool
- 
+
  echo $g['education'][1]. '<br>'; // affiche college in 2013
 
- $name = 'Alex';
- $surname = 'METLA';
+$name = 'Alex';
+$surname = 'METLA';
 
- echo $name . ' ' . $surname. '<br>';
+echo $name . ' ' . $surname. '<br>';
 
  // + - * / %
 
- echo 5 + 10;
+echo 5 + 10;
 
- echo 1080 % 2; // les chiffres pairs
+echo 1080 % 2; // les chiffres pairs
 
- $a = 100;
- $b = 15;
+$a = 100;
+$b = 15;
 
- echo '--Réponse:' . $a + $b. '<br>'; 
+echo '--Réponse:' . $a + $b. '<br>'; 
 
  // if
 
  $weather = 'beau'; // neige, pluie, beau, nuageux
 
- if( $weather == 'pluie' ){
-    echo '--Il pluie, rester chez vous--'. '<br>';
- }
+if( $weather == 'pluie' ){
+   echo '--Il pluie, rester chez vous--'. '<br>';
+}
 
- if( $weather == 'niege' ){
-    echo '--Il niege, rester chez vous--'. '<br>';
- }
+if( $weather == 'niege' ){
+   echo '--Il niege, rester chez vous--'. '<br>';
+}
 
- if( $weather == 'beau' ){
-    echo '--Il fait beau, sortez vous--'. '<br>';
- }
+if( $weather == 'beau' ){
+   echo '--Il fait beau, sortez vous--'. '<br>';
+}
 
- if( $weather =='nuageux'){
-    echo '--Les nuageux--'. '<br>';
- }
+if( $weather =='nuageux'){
+   echo '--Les nuageux--'. '<br>';
+}
 
 
 // Carte d'accès au club (if)
- $age = 20;
- 
- if( $age < 24 ){
-    echo '--Vous êtes trop jeune pour entrer dans le club!--'. '<br>';
- }
- 
- if( $age >= 24 ){
-    echo '--Bienvenue dans le Club!--'. '<br>';
- }
+$age = 20;
+
+if( $age < 24 ){
+   echo '--Vous êtes trop jeune pour entrer dans le club!--'. '<br>';
+}
+
+if( $age >= 24 ){
+   echo '--Bienvenue dans le Club!--'. '<br>';
+}
 
  // <, >, <=, >=, ==, != 
 
  // if, else
 
- $name = 'Jonny';
+$name = 'Jonny';
 
- if( $name == 'Jonny' ){
-    echo '--Bienvenue Jonny--'. '<br>';
- } else {
-    echo '--Juste Jonny qui a accéss--'. '<br>';
- }
- 
+if( $name == 'Jonny' ){
+   echo '--Bienvenue Jonny--'. '<br>';
+} else {
+   echo '--Juste Jonny qui a accéss--'. '<br>';
+}
+
 // Les operators logiques (or, and)
 
 $name = 'Jonny';
@@ -103,7 +103,7 @@ if( $age < 20 and $name != 'Jonny'){
 // L'operator "and" (example)
 
 $rating = 33;
- 
+
 if ( $rating >= 25 and $rating <= 75){ //if rating=true and rating=true
    echo 'You good'. '<br>';
 } else {
