@@ -575,3 +575,75 @@ Boucles infinies
 
 Attention: Si la condition d'arrêt d'une boucle est mal définie, cela peut être critique. En effet, la boucle sera infinie et plantera ton programme.
 En PHP, si tu n'as pas modifié la configuration de base, les scripts ont une durée de vie de 30 secondes, donc ton navigateur (voire tout ton poste) peut ne pas répondre pendant maximum 30 secondes (il s'agit du paramètre max_execution_time dans ton fichier php.ini). Mais sur des langages de plus bas niveau, cela peut avoir des conséquences plus graves.
+
+## 4.2. Les tableaux multidimensionnels en PHP
+
+Dans la quête précédente, tu as découvert les tableaux à index numérique et les tableaux associatifs.
+
+En PHP - et dans beaucoup d'autres langages de programmation - il est possible d'imbriquer des tableaux. Autrement dit, de créer un tableau avec plusieurs dimensions (des tableaux dans des tableaux).
+
+C'est ce que nous allons voir ici.
+
+Dans la quête précédente, tu as eu à gérer un tableau avec une seule personne, ton ami Indiana. Mais comment faire si tu souhaites avoir au sein d'une même variable, les armes d'Indiana et de ses ennemis ?
+
+Pour cela, il faut faire ce que l’on appelle un tableau multidimensionnel. Il s'agit d'un tableau qui va contenir en valeur d'autres tableaux (qui eux-mêmes peuvent contenir d'autres tableaux et ainsi de suite...).
+
+```bash
+$weaponsIndiana = ['whip', 'gun', 'saber'];
+$weaponsHelen = ['knife', 'shield'];
+$weaponsRavenwood = ['belt', 'dagger', 'gun', 'shield'];
+```
+On peut mieux faire, tu ne crois pas ?
+
+Grâce aux tableaux multidimensionnels, tu vas pouvoir tout regrouper au sein d'une seule et même variable, afin d'avoir tous les éléments disponibles simplement et rapidement.
+
+Commence par déclarer ton tableau :
+`$weapons = [];`
+
+$weapons est une variable de type tableau, qui, pour le moment, est vide.
+
+Tu vas maintenant regrouper les armes de nos amis dans un seul et même tableau :
+```bash
+$weapons = [
+  ['whip', 'gun', 'saber'],
+  ['knife', 'shield'],
+  ['belt', 'dagger', 'gun', 'shield'],
+];
+```
+
+`$weapons` est maintenant un tableau multidimensionnel, un tableau qui contient d'autres tableaux en valeur.
+Grâce à lui, tu vas pouvoir manipuler une seule variable au lieu de 3.
+
+```bash
+var_dump($weapons[0]); // affiche : ['whip', 'gun', 'saber']
+var_dump($weapons[1]); // affiche : ['knife', 'shield']
+var_dump($weapons[2]); // affiche : ['belt', 'dagger', 'gun', 'shield']
+```
+
+Bien que tu aies accès à toutes les armes depuis une seule et même variable, il te faut quand même identifier quelles armes appartiennent à quel personnage.
+
+Pour ce faire, tu vas utiliser le nom de chaque personnage en tant que clé. Tu auras donc un tableau associatif, et pour chaque clé, tu vas y associer le tableau contenant les arme
+```bash
+$weapons = [
+    'Indiana Jones' => ['whip', 'gun', 'saber'],
+    'Marion Ravenwood' => ['knife', 'shield'],
+    'Helen Seymour' => ['belt', 'dagger', 'gun', 'shield']
+];
+```
+
+### Accéder à un élément du tableau
+
+Tu peux afficher les différentes armes en passant par les index/clés des élements du tableau 
+
+### Parcourir un tableau multidimensionnel
+
+Lors de la quête précédente tu as vu comment parcourir un tableau simple à l'aide des boucles.
+Comme tu peux t'en douter, qui dit tableaux imbriqués, dit ... boucles imbriquées !
+
+L'idée est la suivante : on parcourt le premier niveau du tableau, puis, pour chaque niveau on parcourt les sous-niveaux, ...etc.
+
+Tu auras donc une boucle dans une boucle dans une boucle ... (autant de fois que de dimensions dans ton tableau).
+
+Si tu as un doute sur l'utilisation des boucles, je t'invite à revoir la quête précédente (voir Prérequis en haut de page).
+
+
