@@ -498,5 +498,80 @@ $values = [1, 2, 3, 4, 5];
 echo array_sum($values); // affiche 15
 ```
 
+## Les boucles
 
+### La boucle for
 
+La boucle for est la plus simple à mettre en place. Tu vas indiquer à PHP de boucler un certain nombre de fois. C'est toi qui définis ce nombre. La boucle for intègre un compteur.
+
+Sa notation est la suivante :
+```bash
+for (debut; fin; pas) {
+    // Do something
+}
+```
+
+### La boucle while
+
+```bash
+// Exemple de boucle while
+$i = 0;
+while ($i < 10) {
+    // Do something
+    $i++;
+}
+
+// Exemple de boucle infinie (À NE PAS FAIRE !!!)
+$firstname = 'Henry';
+while ($firstname != 'Indy') {
+    $firstname = 'Indiana';
+    // Do something...
+}
+```
+Le premier exemple est simple, on boucle tant que `$i` est strictement inférieur à 10.
+Le second est une boucle infinie. Étant donné que le `while` boucle tant que la condition est `true`, il faut bien veiller à ce que l'expression du while devienne `false`.
+
+### La boucle foreach
+
+Le `foreach` permet de boucler sur les tableaux.
+
+Il existe 2 façons de mettre en place un `foreach` :
+```bash
+$movies = [
+  "Les Aventuriers de l'arche perdue",
+  "Indiana Jones et le Temple maudit",
+  "Indiana Jones et la Dernière Croisade",
+  "Indiana Jones et le Royaume du crâne de cristal",
+  "Indiana Jones 5"
+];
+
+// Si tu n'as pas besoin des clés du tableau
+foreach ($movies as $movie){
+    // Do something...
+    echo $movie;
+    // Affiche "Les Aventuriers de l'arche perdue"
+    // (au 1er tour, puis les autres valeurs aux tours suivants)
+}
+
+// Si tu as besoin des clés du tableau
+foreach ($movies as $key => $movie){
+    // Do something...
+    echo $key;      // Affiche 0 (au 1er tour)
+    echo $movie;    // Affiche "Les Aventuriers de l'arche perdue" (au 1er tour)
+}
+```
+
+C'est à toi de choisir le nom des variables dans ton foreach (ici `$key` et `$movie`).
+
+Comme pour tout nommage de variable, essaie d'avoir des noms ayant un sens. Par exemple ici, le tableau contenant des films s'appelle `$movies`. Quand tu boucles avec foreach, tu vas alors récupérer un film à chaque fois, d'où la variable s'appelant `$movie` (cette fois au singulier).
+
+Cette approche pluriel/singulier est souvent utilisée car elle permet de facilement comprendre ce que contient la variable (le tableau dans son ensemble, ou un élément du tableau).
+
+On dit que le foreach va itérer sur chaque élément du tableau (ou de la collection).
+Cela signifie que chaque élément va être lu séquentiellement à chaque tour de boucle.
+
+L'élément en cours de lecture, ainsi que sa clé selon la notation du foreach (avec ou sans le =>), vont être affectés à des variables temporaires (`$key`, `$movie`). Récupérer la clé est surtout utile en présence d'un tableau associatif.
+Boucles infinies
+
+Attention: Si la condition d'arrêt d'une boucle est mal définie, cela peut être critique. En effet, la boucle sera infinie et plantera ton programme.
+En PHP, si tu n'as pas modifié la configuration de base, les scripts ont une durée de vie de 30 secondes, donc ton navigateur (voire tout ton poste) peut ne pas répondre pendant maximum 30 secondes (il s'agit du paramètre max_execution_time dans ton fichier php.ini). Mais sur des langages de plus bas niveau, cela peut avoir des conséquences plus graves.
