@@ -332,7 +332,171 @@ Elles sont alors préfixées par mb_, par exemple mb_strlen, mb_strtoupper... Si
 `sudo apt install php-mbstring`. Tu devras ensuite relancer ton serveur HTTP.
 
 
+## 4.1. Les tableaux et boucles en PHP
 
+Un tableau (ou `array`) est une variable spéciale qui peut contenir plusieurs valeurs à la fois. Tu peux retrouver ce type de variable dans tous les langages de programmation.
+
+Au fur et à mesure que tu avances dans la quête, n'hésite pas à tester le code qui t'est proposé, et à le manipuler, c'est le meilleur moyen d'apprendre.
+
+### Définition des tableaux
+
+Imagine, par exemple, que tu souhaites stocker la liste des armes d'Indy, ton code risque de ressembler à :
+```bash
+$weapon1 = 'whip';
+$weapon2 = 'gun';
+$weapon2 = 'saber';
+```
+Notre objectif est de tout stocker au sein d'une seule et même variable ; On peut alors déclarer :
+`$weapons = ['whip', 'gun', 'saber'];`
+
+Il est aussi possible de déclarer un tableau de la manière suivante :
+`$weapons = array('whip', 'gun', 'saber');`
+Cette méthode n'est cependant presque plus utilisée depuis PHP 5.4
+
+Tu remarques ici que le nom de la variable est au pluriel et cela est volontaire, étant donné que cette dernière va contenir plusieurs valeurs.
+On garde toujours une cohérence entre le nom de la variable et son contenu.
+
+Chaque valeur du tableau est séparée par une virgule.
+
+Attention, nous avons déclaré ici ce que l'on appelle un tableau à index numérique, nous verrons pourquoi juste après.
+Attention également aux simples quotes, ces dernières sont présentes car les valeurs sont de type "string". Mais sache qu'un tableau peut contenir tout type d'élément, par exemple:
+`$elements = [1, 'deux', true, [], 1.8];`
+
+Ici, la variable `$elements` est un tableau qui contient, successivement, les éléments de type int, string, boolean, array (et oui un tableau peut contenir un autre tableau) et float.
+
+### Le tableau indexé numériquement
+
+Tu as vu comment stocker plusieurs informations au sein d'une seule et même variable, c'est génial, mais comment faire pour récupérer une valeur précise ?
+Heureusement, les index sont là. Dans cette étape, tu vas voir les index numériques.
+Lors de la déclaration d'un tableau, si tu ne précises pas les index, ces derniers seront par défaut numériques.
+Un tableau indexé numériquement est tout simplement une liste d'éléments repérés chacun par un index numérique unique. Ainsi, le premier élément du tableau correspondra à l'index 0, le deuxième à l'index 1, le troisième à l'index 2, etc.
+Tu noteras bien que la numérotation commence à 0 et non à 1 !
+Accéder aux éléments d'un tableau
+
+Pour accéder à un élément du tableau, il suffit d'y faire référence grâce à son index.
+Reprenons notre exemple précédent, notre tableau d'armes :
+`$weapons = ['whip', 'gun', 'saber'];`
+
+Dans ce tableau, whip est situé à l'index 0 de notre tableau `$weapons`, gun à l'index 1, et saber à l'index 2.
+
+Attention, pour rappel, le premier élément du tableau est référencé à l'index 0 !
+Tu peux maintenant afficher les différentes valeurs du tableau de la manière suivante :
+```bash
+echo $weapons[0]; // affiche : whip
+echo $weapons[1]; // affiche : gun
+echo $weapons[2]; // affiche : saber
+```
+
+### Ajouter des éléments à un tableau
+
+Bien entendu, un tableau peut avoir un nombre illimité de valeurs. Tu peux initialiser un tableau avec certaines valeurs, et en ajouter de nouvelles au fur et à mesure de l'exécution de ton script.
+
+`var_dump()` permet d'afficher des informations détaillées sur une variable et est très utilisé pour déboguer.
+Le tableau `$weapons` contient 3 éléments de type string avec, pour chaque string, une longueur respective de 4, 3 et 5 caractères.
+
+La syntaxe [ ] après le nom d'une variable de type array permet d'indiquer que l'on ajoute une entrée au tableau. L'index utilisé pour le nouvel élément ajouté correspondra à l'index maximum courant +1.
+
+### Le tableau associatif
+
+Juste avant, tu as vu que chaque valeur de ton tableau pouvait être identifiée numériquement. Il s'agit du comportement par défaut lorsque tu déclares un tableau avec uniquement tes valeurs à l'intérieur.
+
+Pour info, tu pourrais également déclarer ton tableau de valeurs ainsi :
+```bash
+$weapons[0] = 'whip';
+$weapons[1] = 'gun';
+$weapons[2] = 'saber';
+```
+
+La déclaration ci-dessus est identique à celle vue précédemment :
+`$weapons = ['whip', 'gun', 'saber'];`
+
+Lors de la déclaration d'un tableau associatif, on doit indiquer nous-mêmes les indices (= index) du tableau (c'est ce que l'on a fait au-dessus).
+
+Dans la mesure où l'on est libre de les spécifier nous-mêmes, les indices peuvent être non seulement des entiers, mais également des chaînes de caractères. Dans ce cas, on parle de clé (ou key). Ce type de tableau est très pratique pour donner plus de sens aux valeurs contenues.
+Par exemple, on pourrait modifier la déclaration précédente en utilisant des clés plus explicites :
+```bash
+$weapons['weapon_one'] = 'whip';
+$weapons['weapon_two'] = 'gun';
+$weapons['weapon_three'] = 'saber';
+```
+Ou encore :
+```bash
+$weapons = [
+  'weapon_one' => 'whip',
+  'weapon_two'=>'gun',
+  'weapon_three'=>'saber'
+];
+```
+
+Notre variable `$weapons` est toujours de type `array`. Elle contient toujours plusieurs valeurs, mais ces dernières sont identifiées respectivement par les clés weapon_one, weapon_two, weapon_three.
+
+Pour les afficher, on fera donc:
+```bash
+echo $weapons['weapon_one']; // affiche : whip
+echo $weapons['weapon_two']; // affiche : gun
+echo $weapons['weapon_three']; // affiche : saber
+```
+
+Les tableaux associatifs te seront très utiles lors de l'utilisation de tableaux multidimensionnels. Tu verras ça dans la quête suivante.
+
+Petite spécificité, si dans la suite de mon script j'exécute ceci :
+`$weapons['weapon_one'] = 'dagger';`
+
+Je modifie la valeur située à la clé weapon_one, et l'exécution echo `$weapons['weapon_one'];` affichera maintenant la chaîne de caractères 'dagger'. C'est le même comportement que pour une variable.
+Si tu rappelles le même élément en lui assignant une nouvelle valeur, la valeur précédente va être remplacée par la nouvelle. Il en est de même pour les tableaux indexés numériquement.
+
+### Les fonctions utiles pour les tableaux
+
+De nombreuses fonctions en PHP nous permettent de travailler sur les tableaux, des fonctions de mesure, de navigation, d'itération, de tri, et bien plus encore.
+Ce sont des fonctions PHP dites natives car elles font partie du langage PHP.
+
+En voici quelques exemples:
+`count()`
+Permet de compter le nombre d'éléments d'un tableau.
+```bash
+$weapons = ['whip', 'gun', 'saber'];
+echo count($weapons); // affiche 3
+```
+`sort()`
+Permet de trier un tableau par ordre croissant de valeur.
+
+La fonction sort() ne sert qu'à trier des tableaux numériques. Si tu l'utilises sur un tableau associatif tu perds l'association clé => valeur.
+Note: Cette fonction assigne de nouvelles clés pour les éléments du paramètre array. Elle
+effacera toutes les clés existantes que vous aviez pu assigner, plutôt que de les trier.
+
+Il existe d'autres fonctions pour un tableau associatif :
+
+`rsort()`
+Permet d'effectuer un tri en ordre décroissant
+`asort()`
+Permet d'effectuer un tri sur les valeurs en gardant les clés intactes
+`arsort()` Permet d'effectuer un tri sur les valeurs en gardant les clés intactes, mais dans un ordre décroissant
+`ksort()`
+Permet d'effectuer un tri sur les clés en gardant les valeurs intactes
+`krsort()`
+Permet d'effectuer un tri sur les clés en gardant les valeurs intactes mais dans un ordre décroissant
+
+Dans chacune de ces fonctions, tu vas pouvoir définir si tu souhaites un tri ascendant ou descendant. N'hésite pas à consulter la documentation pour savoir comment procéder....
+
+Contrairement à la plupart des fonctions php, tu ne peux pas faire :
+`$sortedWeapons = sort($weapons);`
+En effet, l'utilisation de sort() (comme toute autre fonction de tri) modifie directement le tableau passé en paramètre et retourne TRUE ou FALSE selon si le tri a fonctionné ou non.
+
+Toutes ces fonctions de tri travaillent sur le tableau lui-même, contrairement à la pratique normale qui serait de retourner le tableau trié.
+
+`in_array()`
+Permet de vérifier la présence d'une valeur dans un tableau.
+```bash
+$weapons = ['whip', 'gun', 'saber'];
+var_dump(in_array('whip', $weapons)); // affiche true
+var_dump(in_array('shield', $weapons)); // affiche false
+```
+`array_sum()`
+Permet de calculer la somme des valeurs d'un tableau.
+```bash
+$values = [1, 2, 3, 4, 5];
+echo array_sum($values); // affiche 15
+```
 
 
 
