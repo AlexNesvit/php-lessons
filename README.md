@@ -190,4 +190,149 @@ En d'autres termes : ce qui se passe dans une fonction, reste dans la fonction !
 
 
 
+## Les chaînes de caractères en PHP
+
+### Introduction
+
+Une chaîne de caractères (ou string en anglais) est, comme son nom l'indique, une suite de caractères (lettres, chiffres, ponctuation...), placés dans un ordre défini.
+Pour faire plus simple, un mot ou une phrase sont des chaînes de caractères. Au même titre que les integer ou les array, les string sont un type de données en PHP (mais également dans la plupart des langages informatiques).
+
+### Définir une chaîne de caractères
+
+En PHP, c'est simple, une chaîne de caractères se définit en l'encadrant par des guillemets simples ou doubles (il y a une petite différence entre les deux, que tu verras juste après).
+On parle plus généralement de simple quote ' ou double quote ".
+
+Il y a plusieurs moyens d'afficher une chaîne de caractères en PHP, mais dans l'immense majorité des cas, tu feras appel à `echo`
+`echo 'Je suis professeur'; // affiche : Je suis professeur`
+
+Si la chaîne comporte elle-même le caractère `'` (apostrophe par exemple), il est possible de forcer son affichage en mettant un antislash devant. C'est ce qu'on appelle échapper un caractère.
+Il ne sera alors pas interprété comme une fin de chaîne.
+```bash
+echo 'J\'aime porter un chapeau'; // affiche : J'aime porter un chapeau
+echo "J'aime porter un chapeau"; // affiche la même chose, pas besoin d'échapper une simple quote dans des doubles quotes et vice versa
+```
+Une chaîne est une donnée, elle peut donc être enregistrée dans une variable. Pour afficher une simple variable, il ne faut pas mettre de quote.
+```bash
+$firstname = 'Indiana';
+$presentation = 'Indiana Jones est un célèbre archéologue';
+
+echo $firstname; // affiche : Indiana
+```
+
+Si tu mets une simple quote autour d'une variable, celle-ci ne sera pas interprétée comme telle.
+`echo '$firstname'; // affiche : $firstname`
+
+Par contre (et c'est là la grosse différence), si tu utilises des doubles quotes autour d'une variable, celle-ci est bien interprétée.
+`echo "$firstname"; // affiche : Indiana`
+
+Du coup, tu peux te demander quand utiliser les simples ou les doubles quotes. Il n'y a pas de règle absolue.
+Généralement, pour de simples chaînes, les simples quotes sont utilisées. Tu les utiliseras donc la plupart du temps.
+Par contre, dans certains cas, tu seras amené à manipuler des chaînes complexes, c'est-à-dire dans lesquelles tu souhaites afficher le contenu de plusieurs variables. Dans ce cas, les doubles quotes peuvent s'avérer plus adaptées.
+
+Tu viens de voir comment créer et afficher une chaîne, mais il est également possible de fusionner deux chaînes. C'est ce qui s'appelle, la concaténation.
+
+Pour cela, rien de plus simple, il suffit d'utiliser l'opérateur de concaténation. En PHP, c'est le point `.` qui sert à cela.
+```bash
+$firstname = 'Indiana';
+$lastname = 'Jones';
+echo $firstname . $lastname;  // affiche : IndianaJones
+```
+
+Comme tu peux le voir, le `.` a permis de coller les deux chaînes, de les concaténer.
+S'il est d'usage de mettre un espace de part et d'autre du point pour faciliter la lisibilité, ceux-ci ne sont pas considérés comme faisant partie de la chaîne.
+De ce fait, il n'y a pas d'espace entre "Indiana" et "Jones" dans l'exemple. Embêtant, non ?
+
+Tu vas donc ajouter la chaîne de caractères ' ' entre les deux autres chaînes.
+```bash
+$fullname = $firstname . ' ' . $lastname; // le résultat d'une concaténation peut aussi être enregistré dans une variable.  
+echo $fullname; // affiche : Indiana Jones
+```
+Cette fois, `$fullname` contient bien `$firstname`, suivi d'un espace, suivi de `$lastname`, super !
+
+Tu peux aussi dans ce cas utiliser la syntaxe des doubles quotes, ce qui donnera :
+```bash
+$presentation = "$firstname $lastname est un célèbre archéologue"; // les variables sont interprétées 
+echo $presentation; // affiche : Indiana Jones est un célèbre archéologue
+```
+
+Tu pourrais être tenté d'utiliser les doubles quotes partout. Ce n'est pas forcément une bonne idée , car une variable perdue dans une longue chaîne peut parfois être difficilement lisible.
+De plus, même si dans la grande majorité des cas tu ne verras aucune différence, note que l'interprétation des variables entre doubles quotes est moins performante qu'utiliser la concaténation.
+
+L'opérateur de concaténation peut être utilisé pour ajouter du texte, avant ou après une chaîne.
+```bash
+$film = $fullname . ' et le temple maudit';
+echo $film; // affiche : Indiana Jones et le temple maudit;
+
+$avis = 'J\'aime bien regarder ' . $film;
+echo $avis;  // affiche : J'aime bien regarder Indiana Jones et le temple maudit;
+```
+
+Si tu souhaites ajouter un texte en fin d'une chaîne, et affecter cette nouvelle chaîne à la même variable (donc écraser la valeur en cours), tu peux utiliser la syntaxe simplifiée `.=` (qui mixe l'opérateur de concaténation `.` et l'opérateur d'affectation `=`).
+```bash
+$name = 'Indiana';
+$name .= ' Jones'; // équivalent à $name = $name . ' Jones';
+echo $name; // affiche : Indiana Jones
+```
+Tout ça est bien pratique, mais un peu limité tout de même pour des manipulations plus complexes.
+Heureusement, PHP possède un très grand nombre de fonctions natives qui vont te permettre de gagner beaucoup de temps.
+Il en existe vraiment beaucoup, mais certaines sont plus utilisées que d'autres... Tu vas vite connaître par coeur certaines des plus communes.
+Pour les autres, pas de panique, tu n'es pas obligé de tout connaître, il faut juste que tu puisses facilement les retrouver dans la documentation.
+
+Voici donc une liste non exhaustive de quelques fonctions parmi les plus couramment utilisées.
+
+`strlen` : permet de connaître la taille d'une chaîne, c'est-à-dire le nombre de caractères qui la composent.
+```bash
+$weapon = 'fouet';
+$length = strlen($weapon); // vaut 5, car fouet contient 5 caractères;
+```
+
+`trim` : permet de tronquer les caractères blancs (espaces, tabulation...) en début et fin d'une chaîne. Il existe les variantes ltrim (left) et rtrim (right) qui font la même chose, mais seulement à gauche et à droite de la chaîne.
+Note également qu'il est possible (optionnellement) d'indiquer à trim un autre type de caractère à tronquer à la place des blancs.
+```bash
+$temple = ' maudit  ';
+echo $temple; // affiche " maudit  "
+echo trim($temple); //  affiche "maudit"
+echo ltrim($temple); // affiche "maudit  ";
+echo rtrim($temple); // affiche " maudit";
+```
+
+
+ Manipulation de la casse : PHP est sensible à la casse. C'est-à-dire qu'un caractère minuscule est différent du même caractère en majuscule.
+ Autrement dit, 'a' != 'A'. Il existe cependant plusieurs fonctions pour modifier la casse.
+ Ainsi, strtoupper, renvoie une chaîne en majuscule, tandis que strtolower renvoie une chaîne en minuscule.
+Des variantes existent, comme ucfirst qui convertit le premier caractère d'une chaîne en majuscule, ou encore ucwords qui convertit chaque première lettre des mots d'une phrase en majuscule.
+
+`str_replace` : cette fonction permet de remplacer tout ou partie d'une chaîne par une autre chaîne.
+
+Bien entendu, cela fonctionne uniquement si le motif recherché est trouvé dans la chaîne, sinon la chaîne d'origine non modifiée est renvoyée. Par défaut, str_replace est sensible à la casse, mais il existe str_ireplace qui lui, y est insensible.
+
+Conversion : il existe également des fonctions qui vont aider à échapper certains caractères automatiquement. Par exemple, htmlentities convertit automatiquement les balises HTML contenues dans la chaîne, pour qu'elles ne soient pas interprétées à l'affichage.
+Cela évite des problèmes d'affichage ou d'injection de code malveillant dans une page. Il existe d'autres fonctions utiles comme addslashes, url_encode, nl2br...
+
+explode et implode : Ces deux fonctions, souvent indissociables l'une de l'autre, sont très utilisées.
+Elles permettent pour explode de convertir une chaîne de caractères en un tableau (en fonction d'un délimiteur) et pour implode, de faire l'opération inverse.
+```bash
+$team = 'Harrison Steven George';
+$persons = explode(' ', $team); 
+// la chaîne $team a été explosée en fonction du délimiteur 'espace', en un tableau contenant ['Harrison', 'Steven', 'George']. 
+// le caractère délimiteur 'espace' n'est plus présent dans le tableau obtenu.
+// Pour utiliser explode(), le délimiteur est un paramètre obligatoire.
+
+echo implode (',', $persons); 
+// implode prend en paramètres un délimiteur et un tableau. 
+// affiche "Harrison,Steven,George". Une chaîne est créée à partir des chaînes contenues dans le tableau, et le délimiteur (ici la virgule) est placé entre chaque élément du tableau.
+// pour utiliser implode(), le délimiteur est un paramètre optionnel
+echo implode($persons); // affiche "HarrisonStevenGeorge".
+```
+Certains caractères, notamment les caractères accentués ou de langues étrangères, sont codés sur plusieurs octets (car un seul ne suffisait pas).
+Dans ce cas, l'utilisation des fonctions de manipulation de chaînes classiques peut poser des problèmes (obtentions de résultats tronqués, erronés, de chaînes corrompues...).
+Par exemple, `strlen('é')` donne 2 et non 1, car le caractère 'é' est codé sur 2 octets !
+Pour résoudre cette problématique, il a été ajouté à PHP un module appelé mbstring, qui fournit des équivalences multi-octets aux fonctions de chaînes de caractères classiques.
+Elles sont alors préfixées par mb_, par exemple mb_strlen, mb_strtoupper... Si ce module n'est pas installé, tu peux le faire dans ton terminal via la commande
+`sudo apt install php-mbstring`. Tu devras ensuite relancer ton serveur HTTP.
+
+
+
+
+
 
