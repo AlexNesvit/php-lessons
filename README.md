@@ -105,6 +105,89 @@ L'écriture camelCase consiste à écrire en minuscule et si le nom contient plu
 Remarque Il existe d'autres conventions de nommage que le camelCase. On notera par exemple l'UpperCamelCase ou encore le snake_case.
 
 
+### Les types
+
+Que met-on dans une variable ? Eh bien, des valeurs, des données, ce que l'on veut !
+Le PHP est un langage dit à typage faible. Cela signifie que l'on ne va pas définir le type d'une variable de manière explicite,
+mais que c'est le contenu de la variable qui va définir son type ainsi que son contexte.
+Retiens seulement que PHP est assez souple sur les types de variables, ce qui n'est pas le cas d'autres langages comme le C ou le Java.
+
+Il existe deux grandes familles de types de données :
+
+scalaire
+
+composé
+
+Les variables scalaires sont des variables ne contenant qu'une seule valeur à la fois. Elles sont composées des types suivants :
+
+`Entier` (nombre sans virgule) : c'est le type integer.
+
+`Réel` (nombre à virgule. En php, le séparateur décimal est en fait un point) : c'est le type float.
+
+`Booléen` (2 valeurs, vrai ou faux) : c'est le type boolean.
+
+`Chaîne de caractères` (valeurs encadrées par des simples quotes ou des doubles quotes) : c'est le type `string`
+
+Les variables composées sont des variables comportant plusieurs éléments.
+
+`Tableaux` : c'est le type array
+
+`Objets` : c'est le type object
+
+Il existe également 2 types spéciaux :
+
+Les ressources : variable spéciale faisant référence à une ressource externe (fichier, connexion à une base de données...). On ne va pas s'étendre sur le sujet pour le moment.
+
+`NULL` : représente une variable qui n'a pas de valeur.
+
+La gestion et le fonctionnement des tableaux et objets seront vus dans d'autres quêtes.
+
+Lorsque l'on souhaite créer une variable, on parle de déclaration.
+Lorsque l'on souhaite lui attribuer (ou modifier) une valeur, il faut utiliser l'opérateur d'affectation =. On parle donc d'affectation.
+À la première déclaration de la variable, on parle d'initialisation et on affecte une valeur à cette variable.
+Dans certains langages, il est possible de déclarer une variable sans l'initialiser tout de suite, mais en PHP l'initialisation et la déclaration se font en même temps.
+Le nom de la variable est toujours écrit en premier, suivi de l'opérateur d'affectation, suivi de la valeur.
+```bash
+$i = 1; // on affecte la valeur 1 à la variable $i;
+
+1 = $i; // renvoie une erreur car 1 n'est pas une variable, on ne peut donc pas lui affecter de valeur.
+```
+
+### Exemples de déclaration de variables :
+
+Entiers : `$size = 200; $start = 0;`
+
+Réels `$pi = 3.141592654; $half = 0.5;`
+
+Booléens `$isSaved = true; $hasField = false;`
+
+Chaînes `$firstName = "Indiana"; $lastName = 'Jones';`
+
+Tu noteras qu'il est également possible d'affecter une même valeur à plusieurs variables d'un coup :
+```bash
+$a = $b = $c = 2; // les trois variables $a, $b et $c sont initialisées en même temps à 2
+```
+
+### Les bonnes pratiques :
+
+Pour des raisons de lisibilité du code, dès l'instant que l'on va "typer" une variable en assignant une valeur, on fera
+en sorte de toujours utiliser le même type pour cette variable.
+
+### La portée (ou scope) des variables
+
+La zone dans le code où est déclarée une variable est importante. Une variable peut ne pas être visible par l'ensemble
+de ton code.
+
+Dans la plupart des cas, quand tu déclares une variable, celle-ci est dans tout le script en- dessous de l'endroit où tu l'affectes. On parle de variable à portée globale.
+```bash
+<?php
+echo﻿ $movie; // erreur car $movie n'existe pas;
+$movie = 'Indiana Jones et le Royaume du crâne de cristal';
+echo $movie ; // affiche bien le contenu de $movie car la variable a été définie au-dessus.
+```
+Si au contraire, tu déclares une variable à l'intérieur d'une fonction (tu verras en détail les fonctions dans une future quête), cette variable ne sera visible et donc accessible que dans ce bloc. On parle cette fois de variable à portée locale. De plus, les variables à portée globale ne sont pas non plus accessibles à l'intérieur de la fonction.
+En d'autres termes : ce qui se passe dans une fonction, reste dans la fonction !
+
 
 
 
