@@ -255,3 +255,5 @@ echo "\n";
 // function round - okruglenie do celogo chisla
 
 
+// Взломай PHP за 5 часов:❗2️⃣ Быстрый курс PHP! https://www.youtube.com/watch?v=VECorQhG5wQ&t=725s
+
